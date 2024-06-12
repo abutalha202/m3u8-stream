@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3U8 Stream</title>
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+</head>
+<body>
+    <h1>M3U8 Stream</h1>
+    <video-js id="my-video" class="vjs-default-skin" controls preload="auto" width="640" height="264">
+        <source src="https://live2.notebulk.xyz/uk_sscricket/tracks-v1a1/mono.m3u8" type="application/x-mpegURL">
+    </video-js>
+
+    <script>
+        var player = videojs('my-video');
+        player.play();
+    </script>
+</body>
+</html>
