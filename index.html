@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M3U8 Stream</title>
-    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
-    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <script src="https://unpkg.com/video.js/dist/video.js"></script>
+    <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        #my-video {
+            width: 80%;
+            max-width: 800px;
+        }
+    </style>
 </head>
 <body>
-    <h1>M3U8 Stream</h1>
-    <video-js id="my-video" class="vjs-default-skin" controls preload="auto" width="640" height="264">
+    <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264" data-setup='{}'>
         <source src="https://live2.notebulk.xyz/uk_sscricket/tracks-v1a1/mono.m3u8" type="application/x-mpegURL">
-    </video-js>
+        Your browser does not support the video tag.
+    </video>
 
     <script>
         var player = videojs('my-video');
